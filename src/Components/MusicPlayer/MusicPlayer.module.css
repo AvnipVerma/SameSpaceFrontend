@@ -1,0 +1,317 @@
+.musicPlayer {
+  color: white;
+}
+
+.cover {
+  height: 65vh;
+  width: 65vh;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.container222 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controlButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.controlButton:hover {
+  color: #1db954;
+}
+
+.seeker {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1vh;
+  background: #2c2c2c;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.seeker:hover {
+  opacity: 1;
+}
+
+/* Track */
+.seeker::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #2c2c2c;
+  border-radius: 5px;
+}
+
+/* Thumb (the slider) */
+.seeker::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  margin-top: -3.5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.seeker::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Active fill part */
+.seeker::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 5px;
+  z-index: 1;
+  pointer-events: none;
+  width: var(--progress, 0%);
+}
+
+.dotss {
+  height: 1vh;
+  width: 3vh;
+  padding-bottom: 0.5rem;
+}
+
+.muteeee {
+  height: 2.5vh;
+  width: 3vh;
+  padding-bottom: 0.3rem;
+}
+
+.pausee {
+  height: 6.3vh;
+  width: 6.5vh;
+}
+
+.artist {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Responsive Breakpoints */
+
+/* Smartphones, Android phones, landscape iPhone */
+/* @media (min-width: 480px) {
+  .cover {
+    height: 55vh;
+    width: 55vh;
+  }
+
+  .pausee {
+    height: 5.3vh;
+    width: 5.5vh;
+  }
+
+  .muteeee {
+    height: 2.2vh;
+    width: 2.5vh;
+  }
+
+  .dotss {
+    height: 1.2vh;
+    width: 2.5vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .cover {
+    height: 50vh;
+    width: 50vh;
+  }
+
+  .pausee {
+    height: 5vh;
+    width: 5vh;
+  }
+
+  .muteeee {
+    height: 2vh;
+    width: 2.5vh;
+  }
+
+  .dotss {
+    height: 1vh;
+    width: 2vh;
+  }
+
+  .artist {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 801px) {
+  .cover {
+    height: 60vh;
+    width: 60vh;
+  }
+
+  .pausee {
+    height: 6vh;
+    width: 6vh;
+  }
+
+  .muteeee {
+    height: 2.5vh;
+    width: 2.8vh;
+  }
+
+  .dotss {
+    height: 1.3vh;
+    width: 2.8vh;
+  }
+
+  .artist {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .cover {
+    height: 65vh;
+    width: 65vh;
+  }
+
+  .pausee {
+    height: 6.3vh;
+    width: 6.5vh;
+  }
+
+  .muteeee {
+    height: 2.5vh;
+    width: 3vh;
+  }
+
+  .dotss {
+    height: 1.4vh;
+    width: 3vh;
+  }
+
+  .artist {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1281px) {
+  .cover {
+    height: 65vh;
+    width: 65vh;
+  }
+
+  .pausee {
+    height: 6.3vh;
+    width: 6.5vh;
+  }
+
+  .muteeee {
+    height: 2.5vh;
+    width: 3vh;
+  }
+
+  .dotss {
+    height: 1.4vh;
+    width: 3vh;
+  }
+
+  .artist {
+    font-size: 1.5rem;
+  }
+} */
+
+@media (min-width:320px) {
+
+  .cover {
+    height: 65vh;
+    width: 100%;
+  }
+
+}
+
+@media (min-width:481px) {
+  .cover {
+    height: 65vh;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+  .cover {
+    height: 65vh;
+    width: 96%;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+
+  .seeker {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 96%;
+    height: 1vh;
+    background: #2c2c2c;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+}
+
+@media (min-width: 1281px) {
+
+  .cover {
+    height: 65vh;
+    width: 96%;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+
+  .seeker {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 96%;
+    height: 1vh;
+    background: #2c2c2c;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+}

@@ -1,0 +1,197 @@
+/* Ensure no default margin or padding on body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container, .homePage {
+  background: linear-gradient(to right, #3D2B1F, #000000);
+}
+
+.container2 {
+  display: flex;
+  gap: 6rem;
+}
+
+.buttons {
+  padding-top: 2rem;
+}
+
+.searchBar {
+  padding-left: 17rem;
+}
+
+.spotify {
+  padding: 1.2rem;
+  height: 6vh;
+  width: 20vh;
+}
+
+.playlist {
+  padding-left: 17rem;
+  width: 42%;
+  padding-top: 1rem;
+}
+
+.musicplayer {
+  padding-left: 15rem;
+}
+
+.playlistWrapper {
+  display: flex;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+}
+
+.upnext {
+  position: absolute;
+  bottom: 0;               /* Align to the bottom of the screen */
+  width: 100%;             /* Full width */
+  background-color: transparent; /* Background color */
+  color: white;            /* Text color */
+  padding: 1rem;           /* Padding for better touch target size */
+  text-align: center;      /* Center the text */
+  border: none;            /* Remove default button border */
+  font-size: 10px;         /* Font size for better readability */
+  cursor: pointer;         /* Pointer cursor on hover */
+  border-radius: 0;        /* No border radius for full width */
+  z-index: 10;             /* Make sure it is above other elements */
+}
+
+.upnext:hover {
+  background-color: #575757; /* Slightly darker background on hover */
+}
+
+/* Drawer styling */
+.drawer {
+  display: flex;
+  position: fixed;
+  bottom: -80%; /* Initially hidden */
+  left: 0;
+  width: 100%;
+  height: 50%; /* Half screen height */
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 1rem;
+  transition: bottom 0.3s ease-in-out; /* Smooth transition */
+  z-index: 100;
+  overflow-y: auto; /* Allow scrolling inside drawer */
+}
+
+/* When the drawer is open, move it up */
+.drawer.open {
+  bottom: 0;
+}
+
+/* Cross icon styling */
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  width: 30px; /* Increase size */
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 2000; /* Ensure it's on top */
+}
+
+.cross:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Upnext button */
+
+
+
+/* Mobile View - Smartphones and Android phones, landscape iPhone */
+@media (max-width: 480px) {
+  body {
+    overflow: hidden; /* Prevent scrolling on mobile */
+  }
+
+  .container2, .searchBar, .playlist, .buttons {
+    display: none;
+  }
+
+  .musicplayer {
+    padding-top: 1rem;
+
+    /* display: flex; */
+    /* justify-content: center; */
+    padding-left: 1rem;
+    /* padding-right: 22rem; */
+   
+    height: 100vh;
+    width: 90%;
+    display: block;
+  }
+
+}
+
+/* Portrait Tablets, e-readers (Nook/Kindle), portrait iPad */
+@media (min-width: 481px) and (max-width: 600px) {
+  body {
+    overflow: hidden; /* Prevent scrolling on tablet */
+  }
+
+  .container2, .searchBar, .playlist, .buttons {
+    display: none;
+  }
+
+  .musicplayer {
+    padding-left: 0;
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Tablet, landscape iPad, lo-res laptops and desktops */
+@media (min-width: 601px) and (max-width: 800px) {
+  body {
+    overflow: hidden; /* Prevent scrolling on landscape tablets */
+  }
+
+  .container2, .searchBar, .playlist, .buttons {
+    display: none;
+  }
+
+  .musicplayer {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    height: 100vh;
+    display: block;
+  }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 801px) and (max-width: 1024px) {
+  body {
+    overflow: hidden; /* Prevent scrolling on laptops */
+  }
+  .upnext{
+    display: none;
+  }
+  .musicplayer {
+    padding-left: 10rem;
+  }
+
+}
+
+@media (min-width: 1281px) {
+  .musicplayer {
+    padding-left: 15rem;
+    height: 100vh;
+  }
+  .upnext{
+    display: none;
+  }
+}

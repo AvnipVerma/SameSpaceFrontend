@@ -1,0 +1,16 @@
+.searchContainer {
+  color: white;
+}
+
+.searchBar {
+  width: 140%;
+  padding-right: 10px; /* Add space for the magnifying glass */
+  padding-left: 10px;
+  height: 2.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  background-color:#FFFFFF14;
+  color: white;
+}
